@@ -2,6 +2,7 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import Article from 'Article';
+import BasicPage from 'BasicPage';
 import NotFound from 'NotFound';
 
 const Router = ({
@@ -16,6 +17,9 @@ const Router = ({
     case 'Article':
       return <Article {...object} />;
 
+    case 'BasicPage':
+      return <BasicPage {...object} />;
+
     default:
       return <NotFound />;
   }
@@ -26,11 +30,13 @@ const query = gql`
     routeByPath(path: $path) {
       object {
         ...ArticleFragment
+        ...BasicPageFragment
       }
     }
   }
 
   ${Article.fragments.article}
+  ${BasicPage.fragments.basicPage}
 `;
 
 const withQuery = graphql(query, {
