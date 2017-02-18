@@ -93,7 +93,7 @@ class NodeField extends SelfAwareField implements ContainerAwareInterface {
    */
   protected function resolveBasicPage($id) {
     /** @var \Drupal\node\NodeInterface $entity */
-    $entity = $this->resolveEntity($id, 'node', ['basic_page']);
+    $entity = $this->resolveEntity($id, 'node', ['page']);
     return $entity;
   }
 

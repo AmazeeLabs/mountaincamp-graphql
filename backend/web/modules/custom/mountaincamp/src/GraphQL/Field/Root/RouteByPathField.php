@@ -44,7 +44,7 @@ class RouteByPathField extends SelfAwareField implements ContainerAwareInterface
     if ($entity instanceof NodeInterface) {
       $bundle = $entity->bundle();
 
-      if (in_array($bundle, array('basic-page', 'article'), TRUE)) {
+      if (in_array($bundle, array('page', 'article'), TRUE)) {
         return new RouteObjectWrapper($entity);
       }
     }
