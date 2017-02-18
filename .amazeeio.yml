@@ -1,0 +1,18 @@
+sitegroup: mountaincamp
+deploy_tasks:
+  development:
+    before_deploy:
+      - cd backend && composer install
+    after_deploy:
+      - cd backend/web && drush -y updb --cache-clear=0
+      - cd backend/web && drush -y cr
+  production:
+    before_deploy:
+      - cd backend && composer install -o --prefer-dist
+    after_deploy:
+      - cd backend/web && drush -y updb --cache-clear=0
+      - cd backend/web && drush -y cr
+shared:
+  production:
+    - src: files
+      dst: web/sites/default/files

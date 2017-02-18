@@ -1,0 +1,7 @@
+name: MountainCamp GraphQL Demo
+type: module
+description: 'Exposes a custom GraphQL Demo Schema for the Drupal MountainCamp.'
+package: Web Services
+core: 8.x
+dependencies:
+  - graphql

@@ -1,0 +1,1 @@
+{"query routeQuery($path: String!) {\n  routeByPath(path: $path) {\n    object {\n      ...ArticleFragment\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment ArticleFragment on Article {\n  title\n  __typename\n}\n":1}

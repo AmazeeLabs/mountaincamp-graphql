@@ -1,0 +1,9 @@
+.semaphore-cache
+.docker
+.openshift
+.git
+.nginx
+.yarn*
+node_modules
+test
+Jenkinsfile

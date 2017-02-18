@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "entry": {
+    "client": "entry/client",
+    "server": "entry/server"
+  },
+  "template": "index.ejs",
+  "scripts": {
+    "persist": "persistgraphql app app/shared/queries.json --add_typename --js --extension js",
+    "dev": "react-scripts dev",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "flow": "react-scripts flow",
+    "test": "react-scripts test",
+    "test:watch": "yarn run test -- --watch"
+  },
+  "dependencies": {
+    "apollo-client": "^0.8.1",
+    "classnames": "^2.2.5",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "flow-bin": "^0.38.0",
+    "graphql-anywhere": "^2.2.0",
+    "graphql-tag": "^1.2.4",
+    "history": "^4.0.0",
+    "offline-plugin": "^3.3.1",
+    "persistgraphql": "0.2.10",
+    "react": "^15.3.0",
+    "react-apollo": "^0.10.0",
+    "react-dom": "^15.3.0",
+    "react-helmet": "^4.0.0",
+    "react-hot-loader": "^3.0.0-beta",
+    "react-redux": "^4.0.6",
+    "react-router": "^2.6.1",
+    "react-router-redux": "^4.0.7",
+    "recompose": "^0.20.2",
+    "redux": "^3.6.0",
+    "reselect": "^2.0.2"
+  },
+  "devDependencies": {
+    "@amazee/react-scripts": "0.0.14"
+  },
+  "engines": {
+    "node": "7.0.0"
+  }
+}

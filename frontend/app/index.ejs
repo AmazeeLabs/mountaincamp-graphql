@@ -1,0 +1,14 @@
+<!doctype html>
+<html<%- typeof(htmlAttributes) !== 'undefined' ? htmlAttributes : '' %>>
+  <head>
+    <%- typeof(htmlHead) !== 'undefined' ? htmlHead : '' %>
+  </head>
+  <body>
+    <div id="app">
+      <%- typeof(renderedContent) !== 'undefined' ? renderedContent : '' %>
+    </div>
+    <% if (typeof(initialState) !== 'undefined') { %>
+      <script>window.__INITIAL_STATE__ = <%- initialState %>;</script>
+    <% } %>
+  </body>
+</html>

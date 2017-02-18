@@ -1,0 +1,10 @@
+parameters:
+  graphql.config:
+    cache: false
+    schema_class: Drupal\mountaincamp\GraphQL\Relay\Schema
+
+services:
+  graphql.schema_provider:
+    class: Drupal\mountaincamp\SchemaProvider\SchemaProvider
+  graphql.type_resolver:
+    class: Drupal\mountaincamp\TypeResolver\TypeResolver
