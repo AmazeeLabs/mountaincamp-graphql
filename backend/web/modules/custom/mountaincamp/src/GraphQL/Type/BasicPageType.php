@@ -3,6 +3,7 @@
 namespace Drupal\mountaincamp\GraphQL\Type;
 
 use Drupal\graphql\GraphQL\Type\AbstractObjectType;
+use Drupal\mountaincamp\GraphQL\Field\BasicPage\BasicPageBodyField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityCanonicalUriField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityIdField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityLabelField;
@@ -27,6 +28,7 @@ class BasicPageType extends AbstractObjectType {
     $config->addField(new NodeChangedDateField());
     $config->addField(new NodeCreateDateField());
     $config->addField(new HelloWorldField());
+    $config->addField(new BasicPageBodyField());
   }
 
   /**
