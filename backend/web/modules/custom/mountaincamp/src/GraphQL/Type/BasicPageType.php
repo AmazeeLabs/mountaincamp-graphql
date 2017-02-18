@@ -8,6 +8,7 @@ use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityCanonicalUriField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityIdField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityLabelField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Entity\EntityPreferredUriField;
+use Drupal\mountaincamp\GraphQL\Field\Common\Node\NodeAuthorField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Node\NodeChangedDateField;
 use Drupal\mountaincamp\GraphQL\Field\Common\Node\NodeCreateDateField;
 use Drupal\mountaincamp\GraphQL\Field\Root\HelloWorldField;
@@ -29,6 +30,7 @@ class BasicPageType extends AbstractObjectType {
     $config->addField(new NodeCreateDateField());
     $config->addField(new HelloWorldField());
     $config->addField(new BasicPageBodyField());
+    $config->addField(new NodeAuthorField());
   }
 
   /**
